@@ -1,0 +1,47 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-areas:
+    'header header header header header header'
+    'sideNav main-content  main-content  main-content  main-content aside'
+    'footer footer footer footer footer footer';
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-areas:
+      'header header header header header header'
+      'sideNav sideNav sideNav sideNav sideNav sideNav'
+      'main-content main-content main-content main-content main-content main-content'
+      'aside aside aside aside aside aside'
+      'footer footer footer footer footer footer';
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.sideNav {
+  grid-area: sideNav;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.content {
+  grid-area: main-content;
+}
